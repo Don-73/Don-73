@@ -1,5 +1,8 @@
 import { Composition } from "remotion";
 import {
+  AI_THREAT_COMP_NAME,
+  AI_THREAT_HEIGHT,
+  AI_THREAT_WIDTH,
   COMP_NAME,
   defaultMyCompProps,
   defaultTravelMapProps,
@@ -10,6 +13,11 @@ import {
   VIDEO_HEIGHT,
   VIDEO_WIDTH,
 } from "../../types/constants";
+import {
+  AIThreatVideo,
+  AI_THREAT_FPS,
+  getAIThreatDurationInFrames,
+} from "./AIThreat/AIThreatVideo";
 import { Main } from "./MyComp/Main";
 import { NextLogo } from "./MyComp/NextLogo";
 import { TravelMap } from "./TravelMap/Main";
@@ -45,6 +53,14 @@ export const RemotionRoot: React.FC = () => {
         width={VIDEO_WIDTH}
         height={VIDEO_HEIGHT}
         defaultProps={defaultTravelMapProps}
+      />
+      <Composition
+        id={AI_THREAT_COMP_NAME}
+        component={AIThreatVideo}
+        durationInFrames={getAIThreatDurationInFrames()}
+        fps={AI_THREAT_FPS}
+        width={AI_THREAT_WIDTH}
+        height={AI_THREAT_HEIGHT}
       />
     </>
   );

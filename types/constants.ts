@@ -33,3 +33,9 @@ export const defaultTravelMapProps: z.infer<typeof TravelMapProps> = {
 };
 
 export const TRAVEL_MAP_DURATION_IN_FRAMES = 150;
+
+export const AI_THREAT_COMP_NAME = "AIThreatVideo";
+// Matches the raw source footage (public/footage/ai-threat-raw.mp4) so we can
+// export at source resolution per the edit spec.
+export const AI_THREAT_WIDTH = 1352;
+export const AI_THREAT_HEIGHT = 638;

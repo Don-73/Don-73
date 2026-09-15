@@ -33,3 +33,14 @@ export const defaultTravelMapProps: z.infer<typeof TravelMapProps> = {
 };
 
 export const TRAVEL_MAP_DURATION_IN_FRAMES = 150;
+
+export const AI_THREAT_COMP_NAME = "AIThreatVideo";
+// Matches the raw source footage (public/footage/ai-threat-raw.mp4) so we can
+// export at source resolution per the edit spec.
+export const AI_THREAT_WIDTH = 1352;
+export const AI_THREAT_HEIGHT = 638;
+
+export const GEMINI_ZOOM_COMP_NAME = "GeminiZoomVideo";
+// Matches public/footage/gemini-threat-raw.mp4 (1920x1080 screen recording).
+export const GEMINI_ZOOM_WIDTH = 1920;
+export const GEMINI_ZOOM_HEIGHT = 1080;
